@@ -495,11 +495,10 @@ h1, h2, h3, h4 {
 
 .gallery-hero img {
   width: 100%;
-  height: 520px;
+  height: 680px;
   object-fit: contain;
   display: block;
   filter: brightness(0.85);
-  transform: scale(0.6);
 }
 
 .gallery-hero figcaption {
