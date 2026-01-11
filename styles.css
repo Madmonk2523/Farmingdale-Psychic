@@ -12,11 +12,11 @@
 :root {
   /* Colors */
   --midnight: #800020;
-  --deep-purple: #1a1a2e;
-  --mystic-purple: #2d2d4a;
+  --deep-purple: #4a0e1a;
+  --mystic-purple: #5c1825;
   --gold: #d4af37;
   --gold-light: #f4d160;
-  --lavender: #b8a9c9;
+  --lavender: #8b2e3f;
   --cream: #faf8f5;
   --white: #ffffff;
   --text: #e8e6e3;
@@ -496,9 +496,10 @@ h1, h2, h3, h4 {
 .gallery-hero img {
   width: 100%;
   height: 520px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   filter: brightness(0.85);
+  transform: scale(0.6);
 }
 
 .gallery-hero figcaption {
