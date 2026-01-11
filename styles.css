@@ -256,6 +256,11 @@ a:hover {
   height: 100%;
 }
 
+.hero-img-wrap {
+  display: block;
+  width: 100%;
+}
+
 .section {
   padding: 70px 0;
 }
