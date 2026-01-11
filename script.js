@@ -8,7 +8,7 @@ if (menu && nav) {
     const open = nav.classList.toggle('open');
     menu.setAttribute('aria-expanded', String(open));
   });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
     nav.classList.remove('open');
     menu.setAttribute('aria-expanded', 'false');
   }));
