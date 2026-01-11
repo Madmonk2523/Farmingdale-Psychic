@@ -13,3 +13,17 @@ if (menu && nav) {
     menu.setAttribute('aria-expanded', 'false');
   }));
 }
+
+const inlineTargets = document.querySelectorAll('[data-image]');
+if (inlineTargets.length) {
+  fetch('data-uris.json')
+    .then(r => (r.ok ? r.json() : null))
+    .then(map => {
+      if (!map) return;
+      inlineTargets.forEach(img => {
+        const uri = map[img.dataset.image];
+        if (uri) img.src = uri;
+      });
+    })
+    .catch(() => {});
+}
