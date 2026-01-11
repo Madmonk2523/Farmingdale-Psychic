@@ -678,6 +678,22 @@ h1, h2, h3, h4 {
   border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
+.contact-photos {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.contact-photos img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
 /* Contact Form */
 .contact-cta {
   background: rgba(255, 255, 255, 0.03);
