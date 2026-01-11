@@ -482,44 +482,61 @@ h1, h2, h3, h4 {
   background: var(--deep-purple);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
+.gallery-feature {
+  margin-top: 24px;
 }
 
-.gallery-item {
+.gallery-hero {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
-.gallery-item-large {
-  grid-row: span 2;
-}
-
-.gallery-item img {
+.gallery-hero img {
   width: 100%;
-  height: 100%;
+  height: 520px;
   object-fit: cover;
-  transition: transform var(--transition);
+  display: block;
+  filter: brightness(0.85);
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.gallery-item figcaption {
+.gallery-hero figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 28px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.78));
   color: var(--cream);
-  font-size: 0.95rem;
+}
+
+.gallery-hero h3 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.gallery-hero p {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.gallery-hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.gallery-hero li {
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 999px;
+  padding: 6px 12px;
   font-weight: 600;
+  color: var(--cream);
 }
 
 /* ===================================
@@ -608,7 +625,7 @@ h1, h2, h3, h4 {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -662,60 +679,34 @@ h1, h2, h3, h4 {
 }
 
 /* Contact Form */
-.contact-form-wrap {
+.contact-cta {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(212, 175, 55, 0.15);
   border-radius: var(--radius);
-  padding: 40px;
+  padding: 32px;
+  display: grid;
+  gap: 16px;
 }
 
-.contact-form-wrap h3 {
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-  color: var(--cream);
+.contact-cta h3 {
+  font-size: 1.4rem;
+  margin: 0;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.contact-cta p {
+  margin: 0;
+  color: var(--text-muted);
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--text);
+.contact-cta .cta-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-notes p {
+  margin: 0;
+  color: var(--text-muted);
   font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: var(--radius-sm);
-  color: var(--cream);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  transition: border-color var(--transition), background var(--transition);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  background: rgba(212, 175, 55, 0.05);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form-group select {
-  cursor: pointer;
 }
 
 /* ===================================
@@ -793,12 +784,7 @@ h1, h2, h3, h4 {
   }
   
   .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .gallery-item-large {
-    grid-column: span 2;
-    grid-row: span 1;
+    grid-template-columns: 1fr;
   }
   
   .footer-inner {
