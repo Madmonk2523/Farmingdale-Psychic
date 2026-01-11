@@ -260,6 +260,14 @@ a:hover {
   padding: 70px 0;
 }
 
+.section.muted {
+  background: rgba(244, 240, 232, 0.7);
+}
+
+.section.accent {
+  background: linear-gradient(135deg, rgba(214, 203, 229, 0.28), rgba(244, 240, 232, 0.85));
+}
+
 .section-header {
   text-align: center;
   max-width: 640px;
@@ -323,6 +331,32 @@ a:hover {
   margin-bottom: 0.4em;
 }
 
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.step {
+  position: relative;
+  padding-top: 14px;
+}
+
+.step-num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--indigo);
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  box-shadow: 0 12px 26px rgba(44, 47, 107, 0.25);
+}
+
 .highlight {
   background: linear-gradient(135deg, rgba(214, 203, 229, 0.35), rgba(244, 240, 232, 0.8));
 }
@@ -371,6 +405,38 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(44, 47, 107, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.stat-num {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--indigo);
+}
+
+.stat-label {
+  color: var(--muted);
 }
 
 .contact-grid {
@@ -446,6 +512,31 @@ a:hover {
 .map-caption {
   margin-top: 8px;
   color: var(--muted);
+}
+
+.cta-band {
+  background: linear-gradient(135deg, rgba(44, 47, 107, 0.08), rgba(198, 165, 100, 0.15));
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+.cta-figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(44, 47, 107, 0.08);
+  display: block;
+}
+
+.cta-figure figcaption {
+  color: var(--muted);
+  margin-top: 8px;
 }
 
 .site-footer {
